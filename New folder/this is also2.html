@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css1.css">
+<link rel="stylesheet" href="css2.css">
+<link rel="stylesheet" href="css3.css">
+<style type="text/css">
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+	
+		/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+	
+	}
+	
+</style>
+<body>
+	
+	
+	
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About us</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+	<a href="#location" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Location</a>
+    <a href="login.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Login</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#act" class="w3-bar-item w3-button">Activities</a>
+        <a href="#extra" class="w3-bar-item w3-button">Extras</a>
+        <a href="#media" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large">About us</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large">Location</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Login</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="ing1.jpg" style="width:100%;height:400px">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img2.png" style="width:100%;height:400px">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img3.jpg" style="width:100%;height:400px">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">ANAND INTERNATIONAL COLLEGE OF ENGINEERING, JAIPUR</h2>
+	  <a name="about"></a>
+    <p class="w3-opacity"><i>We love AICE</i></p>
+    <p class="w3-justify">Anand International College of Engineering is all set for setting up its legacy of being one of the best engineering colleges in Jaipur. The college ranks among one of the top B. Tech colleges in Jaipur Rajasthan. If you are looking forward to have your B. Tech degree from the private engineering colleges in Jaipur, then you should end your search at the Anand International College of Engineering as it surely is the best and smart choice for B. Tech. With many B. Tech colleges in Rajasthan, you should definitely go for the best one. Anand International College of Engineering is approved by the AICTE and is making a remarkable progress of finding a spot for itself among the best engineering colleges of Jaipur. The commitment of the college to deliver nothing but excellence in each and every sphere has made the Anand International College of Engineering as the top B. Tech colleges in Rajasthan. Thus, for the quality education in the B. Tech Colleges in Jaipur, the Anand International College of Engineering should be your primary choice. It is not easy to find such B. Tech colleges in Rajasthan that pays attention to provide excellent education and other soft skills for overall development. So, get enrolled in Anand International College of Engineering and get the best!
+	 </p>
+	  
+	  <a name="act"></a>
+	  <!-- abhi bki ha -->
+    <div class="w3-row w3-padding-32">
+		<p>Computer Science faculties</p>
+      <div class="w3-third">
+        <p>Sanjog sir</p>
+        <img src="sangojsir.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%;height:189px">
+      </div>
+      <div class="w3-third">
+        <p>Dharmendar sir</p>
+        <img src="001-pasport.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%;height:189px">
+      </div>
+      <div class="w3-third">
+        <p>Arpit sir</p>
+        <img src="image.jpg" class="w3-round" alt="Random Name" style="width:60%;height:189px">
+      </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">About Developes!!!!!</h2>
+      <p class="w3-opacity w3-center"><i>We are a team!! </i></p><br>
+
+		
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="/w3images/newyork.jpg" alt="Tanishq" style="width:100%;height:240px" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Tanishq Single</b></p>
+            <p class="w3-opacity">Programer</p>
+            <p>Aice 2nd Year <br> Read aboutme in detail...</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Read more</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="utkarshimg.jpg" alt="Utkarsh" style="width:100%;height:240px" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Utkarsh Harit</b></p>
+            <p class="w3-opacity">Programer and Designer</p>
+            <p>Aice 2nd Year <br> Read aboutme in detail...</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Read more</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="umangimg.jpg" alt="Umang" style="width:100%;height:240px" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Umang Mittal</b></p>
+            <p class="w3-opacity">Management in dbms</p>
+            <p class="w3-opacity"></p>
+            <p>Aice 2nd Year <br> Read aboutme in detail...</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Read more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--abhi bcha ha-->
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">&times;</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+	
+     
+
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+	  
+	   
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Any Inquiry? Drop a Question!</i></p>
+	  <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">Campus Address <span class="w3-tag w3-red w3-margin-left">Near Kanota, Agra Road, Jaipur. Phone: 9928755552, 9928755553 Fax: 01429- 234994</span></li>
+        <li class="w3-padding">Corporate office <span class="w3-tag w3-red w3-margin-left">D-40, Shanti Path, Jawahar Nagar, Jaipur Phone: 0141 - 2600231, 4109030</span></li>
+        <li class="w3-padding">Email: <span class="w3-badge w3-right w3-margin-right"> info@anandice.ac.in</span></li>
+      </ul>
+		<a name="media"></a>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> AICE, Kanota<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: 0141 - 2600231<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: info@anandice.ac.in<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+<!-- Add Google Maps -->
+
+<h2 align="center">Anand Map</h2>
+	<a name="location"></a>
+<a href="https://www.google.co.in/maps/place/Anand+International+College+of+Engineering/@26.8636531,75.9661632,15.84z/data=!4m12!1m6!3m5!1s0x396db8be74c25e59:0x675325c0c46956fc!2sAnand+International+College+of+Engineering!8m2!3d26.862379!4d75.970923!3m4!1s0x396db8be74c25e59:0x675325c0c46956fc!8m2!3d26.862379!4d75.970923?hl=en" title="Click to Rdirect to google maps" value="Click for google maps"><img src="map.png"  style="width:100%;height:400%;"><br />Click here to be redirected to google maps</a>
+	<a name="extra"></a>
+	
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+	
+	}
+	
+	
+	
+	
+	
+	var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>		
+
+</body>
+</html>
